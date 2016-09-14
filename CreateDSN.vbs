@@ -26,9 +26,13 @@ strValue = "C:\WINDOWS\System32\SQLSRV32.dll"
 objReg.SetStringValue HKEY_LOCAL_MACHINE,strKeyPath,strValueName,strValue
 
 strValueName = "Server"
-strValue = "PHELLSBSQLST103"
+strValue = WScript.Arguments(0) 
 objReg.SetStringValue HKEY_LOCAL_MACHINE,strKeyPath,strValueName,strValue
 
 strValueName = "Trusted_Connection"
 strValue = "Yes"
 objReg.SetStringValue HKEY_LOCAL_MACHINE,strKeyPath,strValueName,strValue
+
+
+
+WScript.Arguments(0)
