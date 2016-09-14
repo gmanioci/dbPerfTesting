@@ -2,20 +2,20 @@
 
 How To Execute Automated Perfmon Data Collection
 
-1) Copy these files to c:\temp of the machine to be monitored:
+
+1) Extract and copy these files to c:\temp of the machine to be monitored:
   
-	CreateDSN.vbs
-	GeneratePerfmon_ansi.ps1
+	
+CreateDSN.vbs
+	
+GeneratePerfmon_ansi.ps1
 
-2) In AutomatingPerfmonDataColl.sql, edit the follection two parameters 
-   to configure the amount of data that you want to collect:
 
 
-	-- UPDATE HERE ---------------------------------
-	set		@SampleInterval		     = 5  -- seconds
-	set		@NbrSamplesToCollect	 = 5
+2) By default, the script will collect 5 samples of perfmon 5 seconds apart.  Edit as needed in AutomatingPerfmonDataColl.sql
 
-3) Execute AutomatingPerfmonDataColl.sql in Management studio 9SSMS).
-   The query window will stay open until the collection is complete.
+The query window will stay open until the collection is complete.
+
+
 
 END
